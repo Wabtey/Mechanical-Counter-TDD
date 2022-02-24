@@ -171,5 +171,21 @@ class TestCompteur {
     assertEquals(0, c.valRestantes)
   }
   
+  @Test
+  def testValRestantes2R2{
+    c.init(List(0,2))
+    assertEquals(2, c.valRestantes)
+  }
+  
+  @Test
+  def testValRestantes2R3{
+    //val possible = (2+1)*(1+1) = 6
+    //val restante = 6-1 = 5
+    c.init(List(2,1))
+    c.suivant
+    c.suivant
+    assertEquals(3, c.valRestantes)
+  }
+  
  
 }

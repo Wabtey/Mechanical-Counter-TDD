@@ -55,6 +55,7 @@ class CompteurImpl extends Compteur {
   def valRestantes = {
     rouesActuelles match{
       case e::Nil => valPossibles - (e+1)
+      case e1::e2::Nil => valPossibles - (e1+1)*(e2+1)
     }
   }
 }
